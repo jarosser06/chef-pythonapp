@@ -13,13 +13,6 @@ include_recipe 'supervisor'
 include_recipe 'nginx'
 include_recipe 'nodejs::npm'
 
-case node.platform_family
-when 'debian'
-  python_dev = 'python-dev'
-when 'fedora', 'rhel'
-  python_dev = 'python-devel'
-end
-
 nodejs_npm 'grunt-cli' do
   action :install
 end
