@@ -18,6 +18,11 @@ class Chef
       def action_deploy
         run_checkout
         install_packages
+
+        if new_resource.updated_by_last_action?
+          callback(:after_checkout, new_resource.after_checkout)
+        end
+        web_server_setup
       end
 
       def action_remove
