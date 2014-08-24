@@ -20,11 +20,7 @@ platforms:
       - recipe[yum-epel]
 
 suites:
-  - name: nginx
+  - name: default
     run_list:
-      - recipe[pythonapp-test::nginx]
-    attributes:
-  - name: apache
-    run_list:
-      - recipe[pythonapp-test::apache]
+      - recipe[pythonapp-test]
     attributes:

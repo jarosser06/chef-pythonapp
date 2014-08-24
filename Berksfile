@@ -8,6 +8,8 @@ group :integration do
   cookbook 'nginx'
   cookbook 'apt'
   cookbook 'yum-epel'
+  cookbook 'build-essential'
+  cookbook 'python'
 end
 
 metadata
