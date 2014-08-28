@@ -18,7 +18,7 @@ nodejs_npm 'grunt-cli' do
 end
 
 python_app 'tessera.example.com' do
-  repository 'git://github.com/urbanairship/tessera.git'
+  repository 'https://github.com/urbanairship/tessera.git'
   owner node['nginx']['user']
   group node['nginx']['group']
   web_server 'nginx'
