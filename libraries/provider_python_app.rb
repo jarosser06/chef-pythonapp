@@ -50,6 +50,7 @@ class Chef
               pip_cmd = '/usr/bin/pip'
             end
 
+            Chef::Log.info('Installing eggs from requirements.txt')
             shell_out("#{pip_cmd} install -r #{new_resource.path}/requirements.txt")
           end
         else
