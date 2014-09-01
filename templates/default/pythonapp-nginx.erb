@@ -4,8 +4,8 @@
 server {
   listen <%= @params[:port] || 80 %>;
   server_name <%= @server_name %>;
-  access_log <%= @params[:access_log] %>;
-  error_log <%= @params[:error_log] %>;
+  access_log <%= @access_log %>;
+  error_log <%= @error_log %>;
 
   location /media {
     alias <%= ::File.join(@document_root, 'media') %>;

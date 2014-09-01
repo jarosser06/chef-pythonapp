@@ -81,7 +81,7 @@ class Chef
         if new_resource.web_template.nil?
           return 'pythonapp'
         else
-          return run_context.cookbook_name
+          return new_resource.cookbook_name.to_s
         end
       end
     end
