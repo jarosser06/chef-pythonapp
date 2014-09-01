@@ -1,11 +1,3 @@
-package 'git'
-
-directory '/var/www' do
-  action :create
-  owner node['nginx']['user']
-  group node['nginx']['group']
-end
-
 node.default['nginx']['default_site_enabled'] = false
 
 include_recipe 'build-essential'
